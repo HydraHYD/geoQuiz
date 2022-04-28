@@ -36,15 +36,10 @@ class MainActivity : AppCompatActivity() {
         questionTextView = findViewById(R.id.question_text_view)
 
 
-        trueButton.setOnClickListener { view: View ->
-            var newToast = Toast.makeText(this, R.string.correct_toast, Toast.LENGTH_SHORT)
-            newToast.setGravity(Gravity.TOP, 0, 0)
-            newToast.show()
+        trueButton.setOnClickListener { thisView: View ->
             checkAnswer(true)
         }
-        falseButton.setOnClickListener { view: View ->
-            var newToast = Toast.makeText(applicationContext, R.string.incorrect_toast, Toast.LENGTH_SHORT)
-            newToast.show()
+        falseButton.setOnClickListener { thisView: View ->
             checkAnswer(false)
         }
 
